@@ -387,14 +387,13 @@ img {
 
 .name-network:hover,
 .name-network:focus {
-  background-color: #404bbf;
 }
 
 .network-item:hover,
 .network-item:focus {
 }
 
-.network-link {
+.team-network-link {
   width: 100%;
   height: 100%;
   background-color: #4d5ae5;
@@ -407,8 +406,9 @@ img {
   height: 40px;
 }
 
-.network-link:hover,
-.network-link:focus {
+.team-network-link:hover,
+.team-network-link:focus {
+  background-color: #404bbf;
 }
 
 /* ============== Section 4 ================= */
