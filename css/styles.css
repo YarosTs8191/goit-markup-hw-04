@@ -385,9 +385,13 @@ img {
   list-style: none;
 }
 
+.name-network:hover,
+.name-network:focus {
+  background-color: #404bbf;
+}
+
 .network-item:hover,
 .network-item:focus {
-  background-color: #404bbf;
 }
 
 .network-link {
