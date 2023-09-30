@@ -12,6 +12,8 @@ body {
   padding-top: 24px;
   padding-bottom: 24px;
   border-bottom: 1px solid #e7e9fc;
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 p,
@@ -86,7 +88,6 @@ img {
 
 .header-menu-item {
   padding: 24px 0;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
 }
 
@@ -99,10 +100,12 @@ img {
   letter-spacing: 0.02em;
   font-family: Roboto;
   font-style: normal;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-menu-item:first-child .header-menu-link {
   color: #404bbf;
+  position: relative;
 }
 
 .header-menu-item:nth-child(1) .header-menu-link::after {
@@ -170,8 +173,11 @@ img {
       rgba(46, 47, 66, 0.7)
     ),
     url(../images/people-office.jpg);
-  background-repeat: no-repeat center;
+  background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
+  max-width: 1440px;
+  margin: auto;
 }
 
 .title-container {
@@ -215,6 +221,7 @@ img {
   min-width: 169px;
   height: 56px;
   border: none;
+  background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
 .btn:hover,
@@ -370,6 +377,7 @@ img {
 }
 
 .name-network {
+  fill: #f4f4fd;
 }
 
 .network-item {
@@ -388,6 +396,13 @@ img {
   width: 40px;
   height: 40px;
 }
+
+.network-link:hover, .network-link:focus{
+background-color: #404bbf;
+}
+
+
+
 
 /* ============== Section 4 ================= */
 
@@ -427,14 +442,24 @@ img {
   width: 360px;
   height: 420px;
   width: calc(100%-32 * 4) / 6;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+
+
+.portfolio-list:hover{
+box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+
+
 
 .covertext-hiden {
   position: relative;
   overflow: hidden;
 }
 
-.portfolio-list:hover .portfolio-text-wrap {
+.portfolio-list:hover .portfolio-cover-text {
   transform: translateY(0);
 }
 
@@ -443,7 +468,13 @@ img {
   margin-bottom: 32px;
 }
 
-.portfolio-text-wrap {
+
+.portfolio-cover-text {
+  color: var(--CLOUD, #f4f4fd);
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  transform: translateY(0%);
   display: flex;
   position: absolute;
   top: 0;
@@ -451,13 +482,6 @@ img {
   background: var(--IRIS, #4d5ae5);
   transform: translateY(120%);
   transition: transform 400ms linear;
-}
-
-.portfolio-cover-text {
-  color: var(--CLOUD, #f4f4fd);
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
 }
 
 .portfolio-subtitle {
@@ -491,7 +515,15 @@ img {
   padding-top: 101.5px;
   padding-bottom: 100px;
   display: flex;
+  align-items: baseline;
 }
+
+
+.footer-logo-cont{
+margin-right: 120px;
+}
+
+
 
 .footer-span {
   color: #f4f4fd;
@@ -530,7 +562,7 @@ img {
   color: var(--WHITE, #fff);
   font-size: 16px;
   font-weight: 500;
-  line-height: 1.5px; /* 150% */
+  line-height: 1.5; /* 150% */
   letter-spacing: 0.02em;
   margin-bottom: 16px;
 }
@@ -543,4 +575,13 @@ img {
   list-style: none;
   display: flex;
   gap: 16px;
+}
+
+.footer-name-network{
+fill: #f4f4fd;
+
+}
+
+.network-link:hover, .network-link:focus{
+background-color: #31d0aa;
 }
