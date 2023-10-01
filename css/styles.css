@@ -600,7 +600,7 @@ img {
   fill: #f4f4fd;
 }
 
-.network-link:hover,
-.network-link:focus {
+.footer-network-link:hover,
+.footer-network-link:focus {
   background-color: #31d0aa;
 }
